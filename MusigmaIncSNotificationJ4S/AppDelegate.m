@@ -35,22 +35,18 @@ NSLog(@"=========ssssssss======");
      ],
     [self.beaconNotificationsManager enableNotificationsForBeaconID:
     [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:60944 minor:59572]
-                                                        enterMessage:@"HAHAHAHAHA"
-                                                        exitMessage:@"BUHUHUHUHU"
+                                                        enterMessage:@"You are Now in Garments Area. please open the Walmart app to get promotions and discount coupons. Happy shopping."
+                                                        exitMessage:@"Walmart's Garment area thanks you for spending time with us."
     
      ],
     [self.beaconNotificationsManager enableNotificationsForBeaconID:
      [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:46844 minor:62480]
-                                                       enterMessage:@"LALALALA"
-                                                        exitMessage:@"*********************"
+                                                       enterMessage:@"You are dli area. please check the discounts available for today."
+                                                        exitMessage:@"Thanks you for visiting deli area."
      
      ]
     ;
-   /*  [self.beaconNotificationsManager enableNotificationsForBeaconID:
-     [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:60944 minor:59572]
-                                                       enterMessage:@"hahahahahaha"
-                                                        exitMessage:@"BUHUHUHUHUHUHUHUHUHUHUHU**************************"
-     ];*/
+
     
 
     return YES;
