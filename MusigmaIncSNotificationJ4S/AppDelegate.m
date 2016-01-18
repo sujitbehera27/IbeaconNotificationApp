@@ -17,6 +17,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [ESTConfig setupAppID:@"musigma-inc-s-notification-j4s" andAppToken:@"9ddb7a0ccd6ec7b371e898e80e096b1b"];
+    //[ESTConfig setupAppID:@"sujitbehera27-gmail-com-s--16i" andAppToken:@"5aefde69d5e4b563c01ed91df870ab65"];
 NSLog(@"=========ssssssss======");
     self.beaconNotificationsManager = [BeaconNotificationsManager new];
     [self.beaconNotificationsManager enableNotificationsForBeaconID:
@@ -26,23 +27,32 @@ NSLog(@"=========ssssssss======");
      //];
      
     // NOTE: "exit" event has a built-in delay of 30 seconds, to make sure that the user has really exited the beacon's range. The delay is imposed by iOS and is non-adjustable.
+     
      [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:7542 minor:40506]
                                                        enterMessage:@"Welcome to Walmart. Enjoy your shopping with us today. Today you get Please take a guided tour of our office by clicking on the below link http://www.walmart.com"
                                                         exitMessage:@"Goodbye. Hope you had great time shopping with us. We will try our best to help you save your money.Please visit us again."
      
-     ];
+     ],
+    [self.beaconNotificationsManager enableNotificationsForBeaconID:
+    [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:60944 minor:59572]
+                                                        enterMessage:@"HAHAHAHAHA"
+                                                        exitMessage:@"BUHUHUHUHU"
     
-    
- /*   self.beaconNotificationsManager = [BeaconNotificationsManager new];
-     [self.beaconNotificationsManager enableNotificationsForBeaconID:
+     ],
+    [self.beaconNotificationsManager enableNotificationsForBeaconID:
+     [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:46844 minor:62480]
+                                                       enterMessage:@"LALALALA"
+                                                        exitMessage:@"*********************"
      
-     
-     //ICE*************************
-     // NOTE: "exit" event has a built-in delay of 30 seconds, to make sure that the user has really exited the beacon's range. The delay is imposed by iOS and is non-adjustable.
+     ]
+    ;
+   /*  [self.beaconNotificationsManager enableNotificationsForBeaconID:
      [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:60944 minor:59572]
-     enterMessage:@"hahahahahaha"
-     exitMessage:@"BUHUHUHUHUHUHUHUHUHUHUHU**************************"
+                                                       enterMessage:@"hahahahahaha"
+                                                        exitMessage:@"BUHUHUHUHUHUHUHUHUHUHUHU**************************"
      ];*/
+    
+
     return YES;
 }
 
